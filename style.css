@@ -13,6 +13,24 @@ body {
   width: 100%;
 }
 
+.cursor{
+  height: 10px;
+  width: 10px;
+  background-color: #95C11E;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+}
+.cursor-blur{
+  height: 300px;
+  width: 300px;
+  background-color: #96c11e62;
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(60px);
+  z-index: 9;
+}
+
 .nav {
   height: 145px;
   width: 100%;
@@ -23,7 +41,7 @@ body {
   justify-content: flex-start;
   padding: 0 150px;
   position: fixed;
-  z-index: 1;
+  z-index: 99;
 }
 
 .nav img {
@@ -39,6 +57,7 @@ video{
   width: 100%;
   object-fit: cover;
   position: fixed;
+  z-index: -1;
 }
 
 .main{
@@ -55,15 +74,135 @@ video{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  z-index: 10;
 }
 
 .page1 h1{
   text-transform: uppercase;
   font-size: 50px;
   font-weight: 900;
+  position: relative;
+}
+
+/* Pseudo elements */
+.page1 h1::before{
+  content: "Kick Off Your Passion for Football with Us !";
+  position: absolute;
+  color: black;
+  top: -3px;
+  left: -3px;
+  -webkit-text-stroke: 1px #95C11E;
+  z-index: -1;
 }
 .page1 h2{
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 700;
+}
+
+.page2{
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+.scroller{
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+.scroller::-webkit-scrollbar{
+  display: none;
+}
+
+.scroller-in{
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+.scroller h4{
+  display: inline-block;
+  font-weight: 900;
+  font-size: 120px;
+  /* font-family: ; */
+  transition: all linear 0.3s;
+  margin-right: 10px;
+  color: transparent;
+  -webkit-text-stroke: 2px #95C11E;
+}
+
+.scroller h4:hover{
+  color: #95C11E;
+}
+
+@keyframes scroll {
+  from{
+    transform: translate(0);
+  }
+  to{
+    transform: translate(-100%);
+  }
+  
+}
+
+.about-us{
+  height: 40vh;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.about-us img{
+  height: 220px;
+  /* width: 290px; */
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.about-us-in{
+  width: 50%;
+  text-align: center;
+}
+
+.about-us-in h3{
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.about-us-in p{
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.cards-container{
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+  z-index: 10;
+}
+
+.card{
+  height: 80%;
+  width: 22%;
+  background: beige;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+}
+#card1{
+  background-image: url("https://media.istockphoto.com/id/1220348561/photo/young-coach-teaching-kids-on-football-field-football-coach-coaching-children-soccer-football.jpg?s=2048x2048&w=is&k=20&c=LS7lGb-ESvqYcPGte-XZkAt8e3jMmZmeLtTVNsZJRxU=");
 }

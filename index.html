@@ -4,28 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Soccer Club</title>
+
+    <!-- Locomotive Scroll is a JavaScript library that creates smooth scrolling effects on web pages. -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="nav">
-      <img
-        src="/assets/logo.png"
-        alt=""
-      />
+      <img src="/assets/logo.png" alt="" />
       <h4>Toptracker range</h4>
-      <h4>golf lessons</h4>
-      <h4>adventure golf</h4>
+      <h4>Soccer lessons</h4>
+      <h4>adventure soccer</h4>
       <h4>coffee shop</h4>
       <h4>league</h4>
-    </div>  
+    </div>
     <video autoplay loop muted src="/assets/playvideo.webm"></video>
-
+    <div class="cursor"></div>
+    <div class="cursor-blur"></div>
     <div class="main">
-        <div class="page1">
-            <h1>Kick Off Your Passion</h1>
-            <h1>for Football with Us !</h1>
-            <h2>WELCOME TO SOCCER CLUB !</h2>
+      <div class="page1">
+        <h1>Kick Off Your Passion for Football with Us !</h1>
+        <!-- <h1>for Football with Us !</h1> -->
+        <h2>WELCOME TO SOCCER CLUB !</h2>
+      </div>
+      <div class="page2">
+        <!-- <marquee behavior="" direction=""> </marquee> -->
+        <div class="scroller">
+          <div class="scroller-in">
+            <h4>| Toptracker Range</h4>
+            <h4>| Soccer Lessons</h4>
+            <h4>| Adventure Soccer</h4>
+            <h4>| Coffee Shop Leagues</h4>
+          </div>
+          <div class="scroller-in">
+            <h4>| Toptracker range</h4>
+            <h4>| Soccer lessons</h4>
+            <h4>| Adventure soccer</h4>
+            <h4>| Coffee Shop Leagues</h4>
+          </div>
         </div>
+        <div class="about-us">
+          <img
+            src="https://i.pinimg.com/474x/87/87/a3/8787a3773bfaf4ed36ac474a1d46b257.jpg"
+            alt=""
+          />
+          <div class="about-us-in">
+            <h3>ABOUT US</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
+              ipsam repellendus quod minus dignissimos quo, fugiat quaerat quae
+              sunt delectus similique! Perspiciatis nulla excepturi unde ut
+              expedita vel modi voluptatum error earum ab, ullam quia commodi
+              voluptate officia reprehenderit, exercitationem perferendis libero
+              nihil quae asperiores explicabo laudantium aut voluptates dolor.
+            </p>
+          </div>
+          <img src="https://wallpapercave.com/wp/E3WFnro.jpg" alt="" />
+        </div>
+        <div class="cards-container">
+          <div class="card" id="card1"></div>
+          <div class="card" id="card2"></div>
+          <div class="card" id="card3"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
